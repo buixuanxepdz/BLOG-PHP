@@ -1,0 +1,442 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+.slider-active .slick-arrow {
+	left: -50px;
+}
+.slider-active .slick-arrow.slick-next {
+	right: -50px;
+}
+.slider-two-area {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+}
+
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+.post-meta .left a {
+	margin-right: 2px;
+}
+.post-meta {
+	padding: 15px 15px;
+}
+.post-content-wrap {
+	padding: 15px 20px;
+}
+.post-small .post-thumb{height: 100%;}
+.post-small .post-thumb img{height: 100%;}
+.post-content p {
+	padding-right: 0;
+	line-height: 20px;
+}
+.post-box .post-content {
+padding: 33px 26px;
+}
+.slider-active .slick-arrow {
+	left: -50px;
+}
+.slider-active .slick-arrow.slick-next {
+	right: -50px;
+}
+.fetures-top-content h6 {
+	font-size: 16px;
+	line-height: 24px;
+	padding-right: 0;
+}
+.thumb-img-width img {
+	width: 100%;
+}
+.adv-content {
+	left: 195px;
+	text-align: center;
+}
+.adv-content.last-adv {
+	top: 23px;
+	left: 183px;
+	width: 262px;
+}
+.sm-margin {
+	margin: 0 !important;
+}
+.icon-margin a {
+	margin-left: 9px;
+}
+.comment-form input {
+	width: 100%;
+}
+.slider-two-area {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.comment-form.no-sidebar input {
+	width: 100%;
+}
+.l-news > span {
+	line-height: 60px;
+	margin-bottom: 0;
+}
+.news-content h3 {
+	padding-right: 0;
+	line-height: 28px;
+}
+.box-padding {
+	padding: 15px 0;
+	padding-right: 15px;
+}
+.news-content > span {
+	line-height: 37px;
+}
+
+
+
+
+
+
+}
+
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.post-content-wrap {
+	padding: 67px 42px;
+}
+.mean-container .mean-nav ul li a span{
+	display: none;
+}
+.menu-area {
+	padding-bottom: 10px;
+}
+.box-padding {
+	padding: 15px;
+}
+.box-padding.no-sidebar-padding {
+	padding: 10px 0;
+	padding-right: 10px;
+}
+.news-content h3 {
+	font-size: 19px;
+	padding-right: 50px;
+	line-height: 27px;
+}
+.box-padding.no-sidebar-padding h3 {
+	font-size: 19px;
+	line-height: 27px;
+}
+.news-content > span {
+	line-height: 35px;
+}
+.news-content p {
+	margin: 0;
+	padding: 0;
+}
+.sm-tag {
+	margin-bottom: 5px;
+}
+.sm-margin {
+	margin: 0 !important;
+}
+.adv-content {
+	left: 75px;
+	text-align: center;
+}
+.adv-content.last-adv {
+	top: 23px;
+	left: 64px;
+	width: 262px;
+}
+.slider-four-title h1 {
+	font-size: 38px;
+}
+.banner-bottom-post h4 {
+	font-size: 24px;
+	line-height: 26px;
+}
+.comment-form input {
+	width: 100%;
+}
+.post-content .xs-lineheight {
+	line-height: 0;
+}
+.get-in-touch {
+	margin: 0;
+}
+.slider-two-area {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+blockquote {
+	padding: 0 0 0 45px;
+}
+.comment-form.no-sidebar input {
+	width: 100%;
+}
+.thumb-img-width img {
+	width: 100%;
+	height: auto;
+}
+.lifestyle-content h2 {
+	font-size: 26px;
+	line-height: 29px;
+}
+.slider-three-title h1 {
+	font-size: 40px;
+}
+.menu-area.h-8 {
+	padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.header-top-area {
+	padding: 8px 0;
+}
+.logo-area {
+	padding-top: 25px;
+}
+.menu-area {
+	padding-bottom: 10px;
+}
+.mean-container .mean-nav ul li a span{
+	display: none;
+}
+.slider-content.pl-50.pr-50 {
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 100%;
+}
+.slider-btn a {
+	font-size: 16px;
+}
+.post-content p {
+	padding-right: 0;
+}
+.pr-xs-15{
+	padding-right: 15px !important;
+}
+.pl-xs-15{
+	padding-left: 15px !important;
+}
+.post-meta .left a {
+	margin-right: 2px;
+	font-size: 14px;
+}
+.post-meta .right a {
+	margin-left: 9px;
+	font-size: 14px;
+}
+.more a {
+	display: none;
+}
+.thumb-img-width img {
+    width: 100%;
+}
+.lifestyle-content h2 {
+	font-size: 20px;
+	line-height: 23px;
+	margin-bottom: 5px;
+}
+.lifestyle-content span {
+	font-size: 11px;
+}
+.box-padding {
+	padding: 20px 20px;
+}
+.box-padding.no-sidebar-padding {
+	padding: 20px 20px;
+}
+.sm-margin {
+	margin: 0 !important;
+}
+.slider-four-height {
+	height: 395px;
+}
+.slider-four-title h1 {
+	font-size: 27px;
+}
+.slider-btn a {
+	font-size: 14px;
+}
+.slider-five-height {
+	height: 400px;
+}
+.slider-five-title h1 {
+	font-size: 33px;
+}
+.slider-five-text p {
+	font-size: 12px;
+}
+.post-title h4 {
+	font-size: 19px;
+}
+.slider-six-content {
+	padding: 15px;
+}
+.slider-six-title h1 {
+	font-size: 22px;
+}
+.slider-six-content span {
+	margin-bottom: 15px;
+}
+.slider-six-text p {
+	font-size: 12px;
+}
+.slider-btn a {
+	font-size: 12px;
+}
+
+.slider-six-height {
+	height: 450px;
+}
+.banner-post-content h4 {
+	font-size: 18px;
+	line-height: 19px;
+}
+.fetures-top-content h6 {
+	font-size: 15px;
+	line-height: 24px;
+}
+.margin-X {
+	margin: 0 15px;
+}
+.news-content h3 {
+	font-size: 20px;
+	padding-right: 0;
+}
+.comment-form input {
+	width: 100%;
+}
+.comment-reply {
+	margin-left: 30px;
+}
+.comment-form button {
+	padding: 14px 21px;
+	font-size: 16px;
+}
+.get-in-touch {
+	margin: 0;
+}
+#contact-map {
+	height: 300px;
+}
+.get-in-touch {
+	padding: 25px 20px;
+}
+.get-in-touch-form button {
+	padding: 16px 24px;
+	font-size: 15px;
+}
+.slider-two-area {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+blockquote {
+	padding: 0 0 0 35px;
+}
+.latest-post-articale blockquote p {
+	font-size: 15px;
+	margin-bottom: 0px;
+	line-height: 1.5;
+}
+.comment-form.no-sidebar input {
+	width: 100%;
+}
+.slider-two-title h1 {
+	font-size: 32px;
+}
+.slider-two-text {
+	margin-bottom: 35px;
+}
+.slider-three-title h1 {
+	font-size: 30px;
+}
+.post-box .post-content {
+	padding: 9px 10px;
+}
+#search-modal .modal-dialog .modal-content form {
+	width: 280px;
+}
+.menu-area.h-8 {
+	padding-bottom: 10px;
+}
+.footer-text p {
+	line-height: 1.4;
+}
+
+
+
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+.lifestyle-content h2 {
+	font-size: 28px;
+	line-height: 40px;
+	margin-bottom: 5px;
+}
+.slider-five-text p {
+	font-size: 15px;
+}
+.slider-five-title h1 {
+	font-size: 40px;
+}
+.slider-five-height {
+	height: 500px;
+}
+.post-title h4 {
+	font-size: 24px;
+}
+.post-title h4.lg-title-font {
+	font-size: 22px ;
+}
+.slider-six-content {
+	padding: 40px;
+}
+.slider-six-title h1 {
+	font-size: 48px;
+	line-height: 60px;
+}
+.slider-six-text p {
+	font-size: 16px;
+}
+.slider-btn a {
+	font-size: 14px;
+}
+.slider-six-height {
+	height: 550px;
+}
+.banner-bottom-post h4 {
+	font-size: 24px;
+	line-height: 26px;
+}
+.banner-post-content h4 {
+	font-size: 24px;
+	line-height: 26px;
+}
+.news-content h3 {
+	font-size: 24px;
+	padding-right: 0;
+}
+.latest-post-articale blockquote p {
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+#search-modal .modal-dialog .modal-content form {
+	width: 400px;
+}
+
+
+}

@@ -14,10 +14,12 @@
             $posts = $this->model->all();
             $categories = $this->category_model->all();
             $users = $this->user_model->all();
+            $postDashboard = $this->model->postDashboard();
 			$this->view('views/backend/dashboard',[
                 'posts' => $posts,
                 'categories' => $categories,
                 'users' => $users,
+                'postDashboard' => $postDashboard,
             ]);
 		}
     }

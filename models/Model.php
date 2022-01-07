@@ -10,8 +10,7 @@
 		}
 
 		public function all(){
-			$sql = "SELECT * FROM " .$this->table. " ORDER BY created_at DESC";
-
+			$sql = "SELECT * FROM " .$this->table. " ORDER BY id DESC";
 			$result = $this->connection->query($sql);
 
 			$categories = array();
@@ -19,6 +18,8 @@
 			while($row = $result->fetch_assoc()){
 				$categories[] = $row;
 			}
+			// echo $sql;
+			// die();
 			return $categories;
 		}
 		public function find($id){

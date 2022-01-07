@@ -17,6 +17,15 @@
 				'categories' => $categories
 			]);
 		}
+
+			public function detail(){	
+			$slug = $_GET['slug'];
+			$view = $this->model->viewCount($slug);
+			$post = $this->model->find($slug);
+			echo json_encode($post);
+
+			}
+
 		public function store(){
 			$data = $_POST;
 			$target_dir = "publics/posts/";  // thư mục chứa file upload

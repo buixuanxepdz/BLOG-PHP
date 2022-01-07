@@ -52,6 +52,7 @@
                                 <?= date("d/m/Y", strtotime($post['created_at'])) ?>
                           </td>
                           <td class="py-1 text-center">
+                                 <a target="blank" href="?admin=client&mod=home&act=detail&slug=<?= $post['slug'] ?>" class="btn btn-gradient-primary btn-sm viewmodal"><i class="fa fa-eye"></i></a>
                                 <a href="#" data-id="<?= $post['id'] ?>" class="getid btn btn-gradient-success btn-sm" data-toggle="modal" data-target="#updateModal<?= $post['id'] ?>"><i class="fa fa-edit"></i></a>
                                 <a href="#" data-target="#deleteModal<?= $post['id']; ?>" data-toggle="modal" class="btn btn-gradient-danger btn-sm"><i class="fa fa-trash"></i></a>
                           </td>
@@ -173,7 +174,7 @@
                       Bạn chắc chắn muốn xóa ?
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
                       <button type="button" data-id="<?= $post['id'] ?>" class="btn btn-primary btndelete">Xóa</button>
                     </div>
                   </div>
@@ -181,9 +182,45 @@
               </div>
               <?php } ?>
             <!-- end-xóa danh mục -->
+             <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title h3 text-primary" id="exampleModalLabel">Chi tiết danh mục</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                   <form action="">
+                    <div class="modal-body">
+                        <p class="h4">Tiêu đề bài viết : <span id="nameCategory" class="text-danger"></span></p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    </div>
+                   </form>
+                </div>
+              </div>
+            </div>
              <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
               <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
             <script>
+              // $(document).ready(function(){
+              //   $('.viewmodal').click(function(e){
+              //     e.preventDefault();
+              //     let id = $(this).attr('data-id');
+              //     // console.log(id);
+              //     $.ajax({
+              //       url:"/?admin=admin&mod=post&act=detail&id=" +id,
+              //       type: 'get',
+              //       dataType: "JSON",
+              //       success:(response) =>{
+              //         if(response){
+              //            $('#nameCategory').text(response.title);
+              //           $('#detailModal').modal('show');
+              //         }
+              //       }
+              //     })
+              //   })
+              // })
               function ChangeToSlug()
               {
                   var title, slug;
