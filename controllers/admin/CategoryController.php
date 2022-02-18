@@ -7,10 +7,14 @@
 			$this->model = new Category();
 		}
 		public function list(){
-			$categories = $this->model->all();
-			$this->view('views/backend/categories/index',[
-				'categories' => $categories
-			]);
+			 if(isset($_SESSION['auth'])){
+				$categories = $this->model->all();
+				$this->view('views/backend/categories/index',[
+					'categories' => $categories
+				]);
+			}else{
+				header("Location: index.php?admin=auth&mod=login&act=loginForm");
+			}
 		}
 		public function detail(){
 

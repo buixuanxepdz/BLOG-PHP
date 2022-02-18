@@ -9,7 +9,7 @@
                 <div class="slider-content pl-50 pr-50">
                 <div class="slider-title">
                     <a data-animation="fadeInUp" data-delay=".2s" href="#" class="tag"><?= $slide['categoryname']; ?></a>
-                    <h1 style="font-size: 22px;" data-animation="fadeInUp" data-delay=".4s">Simple Lifestyle</h1>
+                    <h1 style="font-size: 22px;" data-animation="fadeInUp" data-delay=".4s"><?= $slide['title'] ?></h1>
                 </div>
                 <div class="slider-text" data-animation="fadeInUp" data-delay=".6s">
                     <span class="pr-15">đăng bởi <?= $slide['username'] ?></span>
@@ -51,7 +51,7 @@
                         </div>
                         <div class="post-content travel-post">
                         <div class="card-body paddingXY">
-                            <h4><a href="#"><?= $randPost['title'] ?></a></h4>
+                            <h4><a href="?admin=client&mod=home&act=detail&slug=<?= $randPost['slug']; ?>"><?= $randPost['title'] ?></a></h4>
                             <div class="author-info d-flex align-items-center">
                              <?php if($randPost['avatar']){ ?>   
                                 <img style="border-radius: 50%;height: 50px;" src="publics/avatars/<?= $randPost['avatar'] ?>" class="author-width" alt="author">
@@ -100,7 +100,7 @@
                             <img src="publics/posts/<?= $hot['thumbnail'] ?>" class="img-fluid" alt="latest">
                             </div>
                             <div class="post-content fix">
-                            <h3><a href="#"><?= $hot['title'] ?></a></h3>
+                            <h3><a href="?admin=client&mod=home&act=detail&slug=<?= $hot['slug']; ?>"><?= $hot['title'] ?></a></h3>
                             <span class="pr-20">bởi <?= $hot['username']; ?></span>
                             <span class="pr-20"><?= date('d/m/Y', strtotime($hot['created_at'])) ?></span>
                             <span class="lnr lnr-eye"><?= $hot['view_count'] ?></span>

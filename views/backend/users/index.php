@@ -60,7 +60,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Tạo mới người dùng</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                   </div>
-                   <form action="?admin=admin&mod=user&act=store" id="createForm" method="POST" enctype="multipart/form-data">
+                   <form action="?admin=admin&mod=user&act=store" id="createuserForm" method="POST" enctype="multipart/form-data">
                     <div class="modal-body">
                         <label for="name">Tên người dùng</label>
                         <input type="text" id="name" class="form-control" name="name">
@@ -88,7 +88,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
-                      <button type="button" class="btn btn-primary" id="butsave">Tạo mới</button>
+                      <button type="submit" class="btn btn-primary" id="butsave">Tạo mới</button>
                     </div>
                    </form>
                 </div>
@@ -116,8 +116,8 @@
             </div>
             <?php } ?>
             <!-- end-xóa người dùng -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js" integrity="sha512-8pbzenDolL1l5OPSsoURCx9TEdMFTaeFipASVrMYKhuYtly+k3tcsQYliOEKTmuB1t7yuzAiVo+yd7SJz+ijFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript">
       $(document).ready(function(){
@@ -139,30 +139,30 @@
         //   })
         // })
 
-        /// them moi
-        $('#butsave').on('click', function(e) {
-          e.preventDefault();
-          var name = $('#name').val();
-          var password = $('#password').val();
-          // var password = md5(password);
-          var email = $('#email').val();
-          var address = $('#address').val();
-          var phone = $('#phone').val();
-            $.ajax({
-              url: "/?admin=admin&mod=user&act=store",
-              type: "POST",
-              data: {
-                name: name,
-                password: password,
-                email: email,	
-                address: address,	
-                phone: phone,	
-              },
-              success: function(data){	
-                   location.reload();		
-              },
-			    });
-        });
+        // /// them moi
+        // $('#butsave').on('click', function(e) {
+        //   e.preventDefault();
+        //   var name = $('#name').val();
+        //   var password = $('#password').val();
+        //   // var password = md5(password);
+        //   var email = $('#email').val();
+        //   var address = $('#address').val();
+        //   var phone = $('#phone').val();
+        //     $.ajax({
+        //       url: "/?admin=admin&mod=user&act=store",
+        //       type: "POST",
+        //       data: {
+        //         name: name,
+        //         password: password,
+        //         email: email,	
+        //         address: address,	
+        //         phone: phone,	
+        //       },
+        //       success: function(data){	
+        //            location.reload();		
+        //       },
+			  //   });
+        // });
         $('.btndelete').on('click', function() {
            let id = $(this).attr('data-id');
           console.log(id);
@@ -174,17 +174,14 @@
             }
           })
         });
-
-      
-
       })
-                <?php 
-                  if(isset($_COOKIE['success'])){ ?>
-                    toastr.success("<?php echo $_COOKIE['success']; ?>");
-                <?php } ?>
-                <?php 
-                  if(isset($_COOKIE['error'])){ ?>
-                    toastr.success("<?php echo $_COOKIE['error']; ?>");
-                <?php } ?>
+      <?php 
+        if(isset($_COOKIE['success'])){ ?>
+          toastr.success("<?php echo $_COOKIE['success']; ?>");
+      <?php } ?>
+      <?php 
+        if(isset($_COOKIE['error'])){ ?>
+          toastr.success("<?php echo $_COOKIE['error']; ?>");
+      <?php } ?>
  </script>
 <?php require_once('views/backend/layouts/footer.php');  ?>

@@ -126,12 +126,14 @@
                 <i class=" fas fa-list menu-icon"></i>
               </a>
             </li>
+            <?php if($_SESSION['auth']['role'] == 1){ //admin  ?> 
             <li class="nav-item">
               <a class="nav-link" href="?admin=admin&mod=user&act=list">
                 <span class="menu-title">Quản lý người dùng</span>
                 <i class=" fas fa-user menu-icon"></i>
               </a>
             </li>
+            <?php } ?>
           </ul>
         </nav>
         <div class="main-panel">

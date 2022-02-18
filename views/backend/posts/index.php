@@ -26,7 +26,7 @@
                           <td class="py-1">
                                 <?= $key+1 ?>
                           </td>
-                          <td class="py-1">
+                          <td class="py-1" style="font-size: 12px;">
                                 <?= $post['title'] ?>
                           </td>
                           <td class="py-1">
@@ -72,7 +72,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Tạo mới bài viết</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                   </div>
-                   <form action="?admin=admin&mod=post&act=store" id="createForm" method="POST" enctype="multipart/form-data">
+                   <form action="?admin=admin&mod=post&act=store" id="createFormPost" method="POST" enctype="multipart/form-data">
                     <div class="modal-body">
                         <label for="title">Tiêu đề</label>
                         <input type="text" id="title" onkeyup="ChangeToSlug();" class="form-control" name="title">
@@ -93,6 +93,7 @@
                     <div class="modal-body">
                         <label for="thumbnail">Ảnh</label>
                         <input type="file" id="thumbnail" class="form-control" name="thumbnail">
+                        <div class="gallery mt-2" style="display: flex; flex-wrap: wrap;"></div>
                     </div>
                     <div class="modal-body">
                         <label for="category">Danh mục</label>
@@ -120,7 +121,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Chỉnh sửa bài viết</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                   </div>
-                   <form action="?admin=admin&mod=post&act=update" class="formSlug" id="createForm" method="POST" enctype="multipart/form-data">
+                   <form action="?admin=admin&mod=post&act=update" class="formSlug" id="updateFormPost" method="POST" enctype="multipart/form-data">
                     <div class="modal-body">
                         <label for="title">Tiêu đề</label>
                         <input type="text" value="<?= $post['title'] ?>" onkeyup="ChangeToSlugUpdate();" class="form-control title" name="title">
@@ -129,7 +130,7 @@
                     </div>
                     <div class="modal-body">
                         <label for="slug">Slug</label>
-                        <input type="text" value="<?= $post['slug'] ?>" class="form-control slug" name="slug">
+                        <input type="text" disabled value="<?= $post['slug'] ?>" class="form-control slug" name="slug">
                     </div>
                     <div class="modal-body">
                         <label for="content">Nội dung</label>

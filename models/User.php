@@ -9,9 +9,9 @@
 			$this->connection = $connection_obj->conn;
 		}
 		function createUser($data){
-			$sql = "INSERT INTO ".$this->table." (name,email,password,avatar,role,address,phone)
+			$sql = "INSERT INTO ".$this->table." (name,email,password,role,address,phone)
 			 VALUES 
-			 ('".$data['name']."','".$data['email']."',md5('".$data['password']."'),'".$data['avatar']."',0,'".$data['address']."','".$data['phone']."')"; //0: người dùng
+			 ('".$data['name']."','".$data['email']."',md5('".$data['password']."'),0,'".$data['address']."','".$data['phone']."')"; //0: người dùng
 			// echo $sql;
 			// die();
 			return $this->connection->query($sql);

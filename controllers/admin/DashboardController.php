@@ -11,16 +11,20 @@
 			$this->user_model = new User();
 		}
         public function list(){
-            $posts = $this->model->all();
-            $categories = $this->category_model->all();
-            $users = $this->user_model->all();
-            $postDashboard = $this->model->postDashboard();
-			$this->view('views/backend/dashboard',[
-                'posts' => $posts,
-                'categories' => $categories,
-                'users' => $users,
-                'postDashboard' => $postDashboard,
-            ]);
+            if(isset($_SESSION['auth'])){
+                $posts = $this->model->all();
+                $categories = $this->category_model->all();
+                $users = $this->user_model->all();
+                $postDashboard = $this->model->postDashboard();
+                $this->view('views/backend/dashboard',[
+                    'posts' => $posts,
+                    'categories' => $categories,
+                    'users' => $users,
+                    'postDashboard' => $postDashboard,
+                ]);
+            }else{
+				header("Location: index.php?admin=auth&mod=login&act=loginForm");
+			}
 		}
     }
 

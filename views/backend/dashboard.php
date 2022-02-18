@@ -95,7 +95,7 @@
                                 <?= $post['view_count'] ?>
                           </td>
                           <td class="py-1 text-center">
-                               <a href="#" class="btn btn-gradient-primary btn-sm"><i class="fa fa-eye"></i></a>
+                               <a target="blank" href="?admin=client&mod=home&act=detail&slug=<?= $post['slug'] ?>" class="btn btn-gradient-primary btn-sm"><i class="fa fa-eye"></i></a>
                           </td>
                         </tr>
                         <?php } ?>

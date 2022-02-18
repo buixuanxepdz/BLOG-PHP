@@ -76,7 +76,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Chỉnh sửa danh mục</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                   </div>
-                   <form action="?admin=admin&mod=category&act=update&id=<?= $category['id'] ?>" id="updateForm" method="POST">
+                   <form action="?admin=admin&mod=category&act=update&id=<?= $category['id'] ?>" id="updateFormCategory" method="POST">
                     <div class="modal-body">
                         <label for="name">Tên danh mục</label>
                         <input type="text" value="<?= $category['name'] ?>" class="form-control" name="name">

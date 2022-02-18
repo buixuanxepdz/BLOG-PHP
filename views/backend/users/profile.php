@@ -79,7 +79,7 @@
                                 </div><!--/tab-pane-->
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                     <hr>
-                                    <form class="form" action="?admin=admin&mod=user&act=update" method="POST" id="registrationForm">
+                                    <form class="form" action="?admin=admin&mod=user&act=update" method="POST" id="profileform">
                                         <div class="form-group">   
                                             <div class="col-xs-6">
                                                 <label for="first_name"><h4>Họ tên</h4></label>

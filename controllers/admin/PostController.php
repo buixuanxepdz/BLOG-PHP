@@ -10,21 +10,25 @@
 			$this->category_model = new Category();
 		}
 		public function list(){
-			$posts = $this->model->listPosts();
-			$categories = $this->category_model->all();
-			$this->view('views/backend/posts/index',[ 
-				'posts' => $posts,
-				'categories' => $categories
-			]);
+			if(isset($_SESSION['auth'])){
+				$posts = $this->model->listPosts();
+				$categories = $this->category_model->all();
+				$this->view('views/backend/posts/index',[ 
+					'posts' => $posts,
+					'categories' => $categories
+				]);
+			}else{
+				header("Location: index.php?admin=auth&mod=login&act=loginForm");
+			}
 		}
 
-			public function detail(){	
-			$slug = $_GET['slug'];
-			$view = $this->model->viewCount($slug);
-			$post = $this->model->find($slug);
-			echo json_encode($post);
+			// public function detail(){	
+			// $slug = $_GET['slug'];
+			// $view = $this->model->viewCount($slug);
+			// $post = $this->model->find($slug);
+			// echo json_encode($post);
 
-			}
+			// }
 
 		public function store(){
 			$data = $_POST;

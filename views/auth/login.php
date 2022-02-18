@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="publics/assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="publics/assets/images/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <div class="container-scroller">
@@ -71,5 +72,12 @@
     <script src="publics/assets/js/hoverable-collapse.js"></script>
     <script src="publics/assets/js/misc.js"></script>
     <!-- endinject -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script>
+       <?php 
+                  if(isset($_COOKIE['error'])){ ?>
+                    toastr.error("<?= $_COOKIE['error']; ?>");
+                <?php } ?>
+     </script>
   </body>
 </html>

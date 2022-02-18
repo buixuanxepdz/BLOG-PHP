@@ -27,7 +27,10 @@
     <script src="publics/assets/js/dashboard.js"></script>
     <script src="publics/assets/js/todolist.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="publics/assets/js/validate.js"></script>
     <script type="text/javascript">
+
   $(document).ready( function () {
     $('.data-table').DataTable();
     

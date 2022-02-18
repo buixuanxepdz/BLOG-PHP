@@ -9,14 +9,18 @@
 			$this->modelCategory = new Category();
 		}
 		public function list(){
-			if($_SESSION['auth']['role'] == 1){   // 1: ADMIN
+			if(isset($_SESSION['auth'])){
+				if($_SESSION['auth']['role'] == 1){   // 1: ADMIN
 				$users = $this->model->all();
 				$this->view('views/backend/users/index',[
 					'users' => $users
 				]);
-			}
-			else{
-				$this->view('views/backend/404');
+				}
+				else{
+					$this->view('views/backend/404');
+				}
+			}else{
+				header("Location: index.php?admin=auth&mod=login&act=loginForm");
 			}
 		}
 		// function detail(){
@@ -33,7 +37,7 @@
 			}else{
 				setcookie('error','Thêm mới thất bại',time()+1);
 			}
-			// header("Location: index.php?admin=admin&mod=user&act=list");
+			header("Location: index.php?admin=admin&mod=user&act=list");
 		}
 
 		public function updateImage(){

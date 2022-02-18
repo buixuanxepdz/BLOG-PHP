@@ -11,7 +11,6 @@
 		}
 	    public function login(){
 	    	$data = $_POST;
-
 	    	$modelUser = new User();
 	    	$users = $modelUser->all();
 	    	foreach ($users as $user) {
@@ -21,7 +20,7 @@
 	    			/*header('location:views/admin/index.php');*/
 	    		}
 	    	}
-	    	$_SESSION['error'] = 'Loi dang nhap';
+	    	setcookie('error','Sai email hoặc mật khẩu',time()+1);
 	    	return $this->back();
 	    }
 	}
