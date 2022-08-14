@@ -1,0 +1,14 @@
+Url của project em làm theo cơ chế Module theo file index.php ngoài cùng 
+
+(domain ảo)/index.php?admin=admin&mod=dashboard&act=list
+
+admin=admin là trang quản trị với mod (module) = dashboard (tương ứng với DashboardController) và act(hành động)
+
+= list (list là hàm trong controller)
+
+- Chạy trang người dùng(front-end) :(domain ảo)/index.php?admin=client hoặc (domain ảo)/
+
+
+tk admin: buixuanxep@gmail.com pass:111111
+tk nhân viên: trandinhnghia@gmail.com  pass 111111
+
